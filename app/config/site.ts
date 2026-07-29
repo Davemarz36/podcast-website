@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "[PROJECT NAME]",
+  name: "People&Stories",
   tagline: "Honest conversations for people still becoming.",
   belief: "Every person carries a story worth hearing.",
   mission:
@@ -43,7 +43,7 @@ export const siteConfig = {
     },
   },
   disclaimer:
-    "[PROJECT NAME] is an independently developed storytelling platform. References to mentors or communities in its founding story do not automatically represent official ownership or endorsement.",
+    "PEOPLE&STORIES is an independently developed storytelling platform. References to mentors or communities in its founding story do not automatically represent official ownership or endorsement.",
 } as const;
 
 export type SocialPlatform = keyof typeof siteConfig.socials;

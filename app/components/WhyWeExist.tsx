@@ -15,10 +15,10 @@ export function WhyWeExist() {
             </h2>
           </Reveal>
           <Reveal delay={0.08} className="max-w-2xl space-y-5 text-base leading-8 text-white/62 sm:text-lg lg:pt-11">
-            <p>Most stories are told after the breakthrough—when the business succeeds, the career makes sense or the difficult season is over.</p>
+            <p>Most stories are told after the breakthrough, for instance, when the business succeeds, the career makes sense or the difficult season is over.</p>
             <p className="border-l-2 border-white pl-5 text-3xl font-medium leading-tight text-white sm:text-4xl">We are interested in the middle.</p>
             <p>The seasons of uncertainty, rebuilding, migration, quiet ambition, difficult decisions and personal growth that rarely receive attention while they are happening.</p>
-            <p>{siteConfig.name} exists to make room for those conversations. Not because we have all the answers, but because the right conversation can help someone recognise their own.</p>
+            <p className="rounded bg-white/8 px-5 py-4 text-white/70">{siteConfig.name} exists to make room for those conversations. Not because we have all the answers, but because the right conversation can help someone recognise their own.</p>
           </Reveal>
         </div>
 
