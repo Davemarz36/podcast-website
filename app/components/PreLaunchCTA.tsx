@@ -1,7 +1,7 @@
-import { siteConfig } from "../config/site";
 import { CTAButton } from "./CTAButton";
 import { NewsletterForm } from "./NewsletterForm";
 import { Reveal } from "./Reveal";
+import { StorySubmissionDialog } from "./StorySubmissionDialog";
 
 export function PreLaunchCTA() {
   return (
@@ -18,7 +18,7 @@ export function PreLaunchCTA() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <CTAButton href="#newsletter-form" variant="white" plain>Join the First Listeners</CTAButton>
-            <CTAButton href={siteConfig.storySubmissionUrl} variant="black" plain>Share a Story</CTAButton>
+            <StorySubmissionDialog />
           </div>
         </Reveal>
 

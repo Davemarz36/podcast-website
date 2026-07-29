@@ -23,7 +23,17 @@ pnpm build
 
 The default scripts use the native Next.js production runtime expected by Vercel. Import the GitHub repository into Vercel or run `vercel deploy --prod` from the project root. Vercel detects pnpm from `pnpm-lock.yaml` and the framework from `vercel.json`.
 
-Set `NEXT_PUBLIC_SITE_URL` to the final custom domain if one is available. When it is omitted, the metadata, canonical URL, sitemap and robots file use Vercel's production URL automatically. No other environment variables are required for the current mock newsletter form.
+Set `NEXT_PUBLIC_SITE_URL` to the final custom domain if one is available. When it is omitted, the metadata, canonical URL, sitemap and robots file use Vercel's production URL automatically.
+
+### Connect story submissions to Supabase
+
+1. Create or select a Supabase project.
+2. Run `supabase/migrations/20260729190000_create_story_submissions.sql` in the Supabase SQL editor.
+3. Copy `.env.example` to `.env.local` for local development.
+4. Add `SUPABASE_URL` and `SUPABASE_SECRET_KEY` to the Vercel project for Production, Preview and Development. A legacy `SUPABASE_SERVICE_ROLE_KEY` also works as a fallback.
+5. Redeploy after adding the Vercel environment variables.
+
+The secret key is used only inside the server route and must never be prefixed with `NEXT_PUBLIC_`. The database table has Row Level Security enabled and no public insert or read policy; form submissions are written by the server-only Supabase client.
 
 The original Sites-compatible commands remain available as `pnpm dev:sites`, `pnpm build:sites` and `pnpm start:sites`.
 
@@ -33,7 +43,7 @@ The editable launch details are centralised in `app/config/site.ts`:
 
 - Change `name` once to replace the working title throughout the page and metadata.
 - Update `mission`, `vision`, `belief`, `contactEmail`, `socials` and `disclaimer` with approved launch content.
-- Replace `storySubmissionUrl` with the final external form or email route.
+- `storySubmissionUrl` points to the on-page story form trigger.
 - Replace `newsletterIntegration` with the chosen email provider identifier, then connect its API in `app/components/NewsletterForm.tsx` at the `INTEGRATION` comment.
 - Update `heroImage` after placing the approved documentary photograph in `public/images/`. Keep a portrait-orientation source with a meaningful crop for mobile.
 - Replace `public/og.png` and `public/favicon.svg` with final brand assets if required.
@@ -56,4 +66,4 @@ public/
   images/         Local documentary photography
 ```
 
-The form validates in the browser and currently uses a short local delay for loading and success states. It does not transmit or store data. Add server-side validation, bot protection, consent handling and secure secret management before connecting a production provider.
+The newsletter form still uses a local mock. The story form validates in both the browser and server, sanitises its rich-text summary and stores accepted submissions in Supabase. The server includes a honeypot field for basic bot filtering; add managed rate limiting or CAPTCHA if submission abuse becomes an issue.

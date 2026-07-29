@@ -26,7 +26,7 @@ export function MissionVision() {
         <Reveal className="mt-14 grid gap-5 sm:grid-cols-[auto_1fr] sm:items-start lg:mt-20">
           <span className="mt-2 hidden h-px w-24 bg-black sm:block" aria-hidden="true" />
           <blockquote className="max-w-5xl text-[48px] font-medium leading-[0.95] tracking-[-0.05em] text-[#313131]">
-            "You do not have to arrive before your story matters."
+            &ldquo;You do not have to arrive before your story matters.&rdquo;
           </blockquote>
         </Reveal>
       </div>

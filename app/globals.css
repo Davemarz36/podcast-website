@@ -54,6 +54,37 @@ select {
   border-radius: 0;
 }
 
+.story-dialog::backdrop {
+  background: rgb(0 0 0 / 0.78);
+  backdrop-filter: blur(5px);
+}
+
+.rich-text-editor:empty::before {
+  color: rgb(0 0 0 / 0.38);
+  content: attr(data-placeholder);
+  pointer-events: none;
+}
+
+.rich-text-editor ul,
+.rich-text-editor ol {
+  margin-block: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.rich-text-editor ul {
+  list-style: disc;
+}
+
+.rich-text-editor ol {
+  list-style: decimal;
+}
+
+.rich-text-editor blockquote {
+  border-left: 2px solid rgb(0 0 0 / 0.3);
+  margin-block: 0.75rem;
+  padding-left: 1rem;
+}
+
 button,
 select {
   cursor: pointer;

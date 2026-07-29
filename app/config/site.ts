@@ -11,8 +11,7 @@ export const siteConfig = {
   siteUrl: "https://stories-still-becoming.officialdavemarz.chatgpt.site",
   contactEmail: "hello@projectname.example",
   newsletterIntegration: "REPLACE_WITH_NEWSLETTER_PROVIDER",
-  storySubmissionUrl:
-    "mailto:hello@projectname.example?subject=I%20have%20a%20story%20to%20share",
+  storySubmissionUrl: "#share-story",
   heroImage: {
     src: "/images/hero-reflection.jpg",
     alt: "A thoughtful young man sitting beside a window in natural light.",
