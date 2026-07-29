@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     type: "website",
     title: `${siteConfig.name} — Honest Conversations for People Still Becoming`,
     description: siteConfig.description,
-    images: [{ url: "/og-v4.jpg", width: 1200, height: 630, alt: siteConfig.belief }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: siteConfig.belief }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — Honest Conversations for People Still Becoming`,
     description: siteConfig.description,
-    images: ["/og-v4.jpg"],
+    images: ["/og.png"],
   },
 };
 

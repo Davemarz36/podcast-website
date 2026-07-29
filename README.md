@@ -28,7 +28,7 @@ The editable launch details are centralised in `app/config/site.ts`:
 - Replace `storySubmissionUrl` with the final external form or email route.
 - Replace `newsletterIntegration` with the chosen email provider identifier, then connect its API in `app/components/NewsletterForm.tsx` at the `INTEGRATION` comment.
 - Update `heroImage` after placing the approved documentary photograph in `public/images/`. Keep a portrait-orientation source with a meaningful crop for mobile.
-- Replace `public/og-v4.jpg` and `public/favicon.svg` with final brand assets if required.
+- Replace `public/og.png` and `public/favicon.svg` with final brand assets if required.
 
 The four conversation pillars live in `app/data/content.ts` so their order and wording can be edited without changing component markup.
 
