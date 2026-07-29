@@ -19,8 +19,13 @@ export function Navigation() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
     };
   }, [open]);
 
@@ -28,7 +33,7 @@ export function Navigation() {
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-500 ${
         scrolled || open
-          ? "border-white/10 bg-charcoal/95 shadow-2xl shadow-black/10 backdrop-blur-md"
+          ? "border-white/10 bg-charcoal/96 shadow-xl shadow-black/10 backdrop-blur-md"
           : "border-transparent bg-transparent"
       }`}
     >
@@ -50,10 +55,10 @@ export function Navigation() {
         </nav>
 
         <a
-          href="#first-listeners"
-          className="hidden border-b border-copper pb-1 text-[0.64rem] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:text-copper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper xl:block"
+          href="#join"
+          className="hidden min-h-11 items-center border border-white/35 px-5 text-[0.64rem] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:border-copper hover:bg-clay focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper lg:inline-flex"
         >
-          Join the First Listeners
+          Join the Journey
         </a>
 
         <button
@@ -79,7 +84,7 @@ export function Navigation() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 flex min-h-dvh flex-col justify-center bg-charcoal px-6 pt-20 lg:hidden"
           >
-            <p className="eyebrow mb-8">Navigate the story</p>
+            <p className="eyebrow mb-8">Explore</p>
             <div className="flex flex-col border-t border-white/15">
               {siteConfig.navigation.map((item, index) => (
                 <a
@@ -94,11 +99,11 @@ export function Navigation() {
               ))}
             </div>
             <a
-              href="#first-listeners"
+              href="#join"
               onClick={() => setOpen(false)}
               className="mt-8 inline-flex min-h-12 items-center justify-center bg-clay px-5 text-xs font-bold uppercase tracking-[0.18em] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper"
             >
-              Join the First Listeners
+              Join the Journey
             </a>
           </motion.nav>
         )}

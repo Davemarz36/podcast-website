@@ -3,19 +3,24 @@ export const siteConfig = {
   tagline: "Honest conversations for people still becoming.",
   belief: "Every person carries a story worth hearing.",
   mission:
-    "To uncover and preserve the stories of everyday people through thoughtful, vulnerable conversations that help guests and listeners find clarity, courage and momentum.",
+    "To create thoughtful and vulnerable conversations that help everyday people tell their stories, understand their journeys and inspire others to move forward with greater courage.",
+  vision:
+    "To build a global storytelling platform where people feel seen, unfinished journeys are valued and ordinary experiences become a source of clarity and courage for others.",
   description:
-    "Thoughtful conversations with everyday people about faith, identity, ambition, struggle, migration, mentorship and the courage to keep moving forward.",
-  siteUrl: "https://project-name.example.com",
+    "A story-led platform exploring faith, identity, migration, ambition, struggle and the unfinished process of becoming.",
+  siteUrl: "https://stories-still-becoming.officialdavemarz.chatgpt.site",
   contactEmail: "hello@projectname.example",
-  trailerUrl: "",
-  newsletterIntegration: "local-mock",
+  newsletterIntegration: "REPLACE_WITH_NEWSLETTER_PROVIDER",
+  storySubmissionUrl:
+    "mailto:hello@projectname.example?subject=I%20have%20a%20story%20to%20share",
+  heroImage: {
+    src: "/images/hero-reflection.jpg",
+    alt: "A thoughtful young man sitting beside a window in natural light.",
+  },
   navigation: [
-    { label: "Vision", href: "#vision" },
-    { label: "Stories", href: "#stories" },
-    { label: "The Experience", href: "#experience" },
-    { label: "About", href: "#about" },
-    { label: "Share Your Story", href: "#share" },
+    { label: "Mission", href: "#mission" },
+    { label: "Why We Exist", href: "#why" },
+    { label: "Conversations", href: "#conversations" },
   ],
   socials: {
     youtube: "#",
@@ -37,7 +42,7 @@ export const siteConfig = {
     },
   },
   disclaimer:
-    "[PROJECT NAME] is an independently developed storytelling platform. Any mentors, communities or organisations mentioned in our founding story do not automatically represent official ownership or endorsement.",
+    "[PROJECT NAME] is an independently developed storytelling platform. References to mentors or communities in its founding story do not automatically represent official ownership or endorsement.",
 } as const;
 
 export type SocialPlatform = keyof typeof siteConfig.socials;

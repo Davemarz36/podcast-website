@@ -1,55 +1,51 @@
 # [PROJECT NAME] — Storytelling platform
 
-A production-ready, responsive pre-launch landing page for a story-led video podcast and media platform. Built with the Next.js App Router, TypeScript, Tailwind CSS, Framer Motion and Lucide icons.
+A concise, production-ready pre-launch site for a story-led video conversation platform. Built with the Next.js App Router, TypeScript, Tailwind CSS, Framer Motion and Lucide icons.
 
 ## Run locally
 
-You need Node.js 22.13 or newer and pnpm 11.
+Use Node.js 22.13 or newer and pnpm 11.
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Open `http://localhost:3000`. To verify a production build:
+Open `http://localhost:3000`. Run the full quality check before publishing:
 
 ```bash
-pnpm build
+pnpm lint
 pnpm test
+pnpm build
 ```
 
-## Content and brand updates
+## Replace launch content
 
-The most common launch changes are intentionally centralised:
+The editable launch details are centralised in `app/config/site.ts`:
 
-- **Project name, tagline, mission, colours, font names, navigation, email, social links, trailer URL and disclaimer:** edit `app/config/site.ts`. Changing `name` replaces the working title throughout the interface and metadata.
-- **Story themes, conversation stages, manifesto and story-sharing options:** edit `app/data/content.ts`.
-- **Team members:** edit `app/data/team.ts`. Each entry supports a portrait, name, role, personal statement and social URL.
-- **Photography:** replace the files in `public/images/` while keeping their filenames, or update the image paths in the content and component files. The on-page labels identify images that are still placeholders. Preserve roughly the same portrait/landscape aspect ratios for predictable crops.
-- **Trailer:** add the final YouTube URL to `trailerUrl` in `app/config/site.ts`, then replace the visual placeholder in `app/components/VideoPlaceholder.tsx` with the approved embed or consent-aware video component.
-- **Social sharing image and favicon:** replace `public/og.png` and `public/favicon.svg` with final branded assets.
+- Change `name` once to replace the working title throughout the page and metadata.
+- Update `mission`, `vision`, `belief`, `contactEmail`, `socials` and `disclaimer` with approved launch content.
+- Replace `storySubmissionUrl` with the final external form or email route.
+- Replace `newsletterIntegration` with the chosen email provider identifier, then connect its API in `app/components/NewsletterForm.tsx` at the `INTEGRATION` comment.
+- Update `heroImage` after placing the approved documentary photograph in `public/images/`. Keep a portrait-orientation source with a meaningful crop for mobile.
+- Replace `public/og-v2.jpg` and `public/favicon.svg` with final brand assets if required.
 
-## Form integrations
+The four conversation pillars live in `app/data/content.ts` so their order and wording can be edited without changing component markup.
 
-Both forms validate in the browser and currently use a short local delay to demonstrate loading and success states. They do not transmit or persist data.
-
-- Connect the newsletter provider in `app/components/NewsletterForm.tsx` at the `INTEGRATION` comment.
-- Connect the story-submission API or CRM in `app/components/StorySubmissionForm.tsx` at the `INTEGRATION` comment.
-
-Before connecting production services, add server-side validation, bot protection, consent logging, privacy-policy links and secure secret management.
+The current hero is a local pre-launch placeholder sourced from [Pexels](https://www.pexels.com/photo/man-sitting-by-a-window-8328481/). Replace it with commissioned or licensed project photography before the final brand launch.
 
 ## Structure
 
 ```text
 app/
-  components/     Reusable page, navigation, form and media components
-  config/         Central site and brand configuration
-  data/           Repeatable editorial and team content
-  globals.css     Global design tokens and responsive utilities
+  components/     Navigation, five page sections, form and footer
+  config/         Central brand and integration configuration
+  data/           Four repeatable conversation pillars
+  globals.css     Design tokens and global responsive styles
   layout.tsx      Fonts and SEO/social metadata
-  page.tsx        Landing-page section composition
+  page.tsx        Concise landing-page composition
 public/
-  images/         Local documentary photography placeholders
+  images/         Local documentary photography
 ```
 
-The layout respects reduced-motion preferences, includes semantic landmarks and accessible form feedback, and uses local responsive images to minimise layout shift.
+The form validates in the browser and currently uses a short local delay for loading and success states. It does not transmit or store data. Add server-side validation, bot protection, consent handling and secure secret management before connecting a production provider.
