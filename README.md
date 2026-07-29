@@ -19,6 +19,14 @@ pnpm test
 pnpm build
 ```
 
+## Deploy to Vercel
+
+The default scripts use the native Next.js production runtime expected by Vercel. Import the GitHub repository into Vercel or run `vercel deploy --prod` from the project root. Vercel detects pnpm from `pnpm-lock.yaml` and the framework from `vercel.json`.
+
+Set `NEXT_PUBLIC_SITE_URL` to the final custom domain if one is available. When it is omitted, the metadata, canonical URL, sitemap and robots file use Vercel's production URL automatically. No other environment variables are required for the current mock newsletter form.
+
+The original Sites-compatible commands remain available as `pnpm dev:sites`, `pnpm build:sites` and `pnpm start:sites`.
+
 ## Replace launch content
 
 The editable launch details are centralised in `app/config/site.ts`:

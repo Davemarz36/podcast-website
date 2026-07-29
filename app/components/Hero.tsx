@@ -25,7 +25,6 @@ export function Hero() {
           alt={siteConfig.heroImage.alt}
           fill
           priority
-          unoptimized
           sizes="100vw"
           className="object-cover object-[48%_38%] grayscale contrast-[1.12] lg:object-[50%_40%]"
         />
