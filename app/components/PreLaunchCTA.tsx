@@ -1,7 +1,7 @@
-import { siteConfig } from "../config/site";
 import { CTAButton } from "./CTAButton";
 import { NewsletterForm } from "./NewsletterForm";
 import { Reveal } from "./Reveal";
+import { ShareStoryButton } from "./ShareStoryButton";
 
 export function PreLaunchCTA() {
   return (

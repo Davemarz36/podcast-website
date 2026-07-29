@@ -40,7 +40,7 @@ export function Navigation() {
       >
         <a
           href="#top"
-          className="relative z-50 font-sans text-lg font-semibold leading-none tracking-[-0.035em] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:text-xl"
+          className="relative z-50 font-sans text-base font-semibold leading-none tracking-[-0.035em] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:text-lg"
           onClick={() => setOpen(false)}
         >
           {siteConfig.name}

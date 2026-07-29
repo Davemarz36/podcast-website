@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "[PROJECT NAME]",
+  name: "People&Stories",
   tagline: "Honest conversations for people still becoming.",
   belief: "Every person carries a story worth hearing.",
   mission:
@@ -14,8 +14,8 @@ export const siteConfig = {
   storySubmissionUrl:
     "mailto:hello@projectname.example?subject=I%20have%20a%20story%20to%20share",
   heroImage: {
-    src: "/images/hero-reflection.jpg",
-    alt: "A thoughtful young man sitting beside a window in natural light.",
+    src: "/images/podcast.png",
+    alt: "David having a one on one session with bunmi.",
   },
   navigation: [
     { label: "Mission", href: "#mission" },
@@ -43,7 +43,7 @@ export const siteConfig = {
     },
   },
   disclaimer:
-    "[PROJECT NAME] is an independently developed storytelling platform. References to mentors or communities in its founding story do not automatically represent official ownership or endorsement.",
+    "PEOPLE&STORIES is an independently developed storytelling platform. References to mentors or communities in its founding story do not automatically represent official ownership or endorsement.",
 } as const;
 
 export type SocialPlatform = keyof typeof siteConfig.socials;
