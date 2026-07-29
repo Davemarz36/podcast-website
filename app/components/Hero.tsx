@@ -1,21 +1,34 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { useRef } from "react";
 import { siteConfig } from "../config/site";
 import { CTAButton } from "./CTAButton";
 
 export function Hero() {
   const reduceMotion = useReducedMotion();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Pan the (taller) image upward as the section scrolls out of view so the
+  // full image is gradually revealed. Disabled when reduced motion is preferred.
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", reduceMotion ? "0%" : "-22%"]);
 
   return (
     <section
       id="top"
+      ref={sectionRef}
       aria-labelledby="hero-heading"
       className="relative isolate flex min-h-[100svh] overflow-hidden bg-black font-sans text-white"
     >
       <motion.div
-        className="absolute inset-0 -z-30 overflow-hidden"
+        className="absolute inset-x-0 top-0 -z-30 h-[128%] overflow-hidden will-change-transform"
+        style={{ y: imageY }}
         initial={reduceMotion ? false : { scale: 1.04, opacity: 0.76 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
