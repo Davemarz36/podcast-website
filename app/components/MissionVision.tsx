@@ -7,7 +7,7 @@ export function MissionVision() {
       <div className="page-shell">
         <Reveal>
           <p className="eyebrow eyebrow-dark">What we are building</p>
-          <h2 id="mission-heading" className="mt-5 max-w-6xl text-[clamp(3rem,6.6vw,7rem)] font-medium leading-[0.92] tracking-[-0.058em]">
+          <h2 id="mission-heading" className="mt-5 max-w-6xl text-[60px] font-normal leading-[0.92] tracking-[-0.058em]">
             We are creating space for people to speak honestly about the lives they are still learning to understand.
           </h2>
         </Reveal>
@@ -25,8 +25,8 @@ export function MissionVision() {
 
         <Reveal className="mt-14 grid gap-5 sm:grid-cols-[auto_1fr] sm:items-start lg:mt-20">
           <span className="mt-2 hidden h-px w-24 bg-black sm:block" aria-hidden="true" />
-          <blockquote className="max-w-5xl text-[clamp(2.6rem,5.6vw,6rem)] font-medium leading-[0.95] tracking-[-0.05em] text-dark-heading">
-            “You do not have to arrive before your story matters.”
+          <blockquote className="max-w-5xl text-[48px] font-medium leading-[0.95] tracking-[-0.05em] text-[#313131]">
+            "You do not have to arrive before your story matters."
           </blockquote>
         </Reveal>
       </div>

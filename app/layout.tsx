@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Manrope, Quicksand, Poppins } from "next/font/google";
 import type { ReactNode } from "react";
 import { siteConfig } from "./config/site";
 import { getSiteUrl } from "./config/site-url";
@@ -8,6 +8,17 @@ import "./globals.css";
 const body = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+});
+
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -61,7 +72,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
-      <body className={body.variable}>{children}</body>
+      <body className={`${body.variable} ${quicksand.variable} ${poppins.variable}`}>{children}</body>
     </html>
   );
 }
