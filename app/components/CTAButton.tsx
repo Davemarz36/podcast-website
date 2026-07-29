@@ -4,20 +4,17 @@ import type { ReactNode } from "react";
 export function CTAButton({
   href,
   children,
-  variant = "solid",
+  variant = "white",
   plain = false,
   className = "",
 }: {
   href: string;
   children: ReactNode;
-  variant?: "solid" | "outline" | "light" | "white" | "black";
+  variant?: "white" | "black";
   plain?: boolean;
   className?: string;
 }) {
   const styles = {
-    solid: "bg-clay text-ivory hover:bg-copper border-clay",
-    outline: "border-white/40 text-white hover:bg-white hover:text-charcoal",
-    light: "bg-ivory text-charcoal border-ivory hover:bg-white",
     white: "border-white bg-white text-black hover:bg-black hover:text-white",
     black: "border-white/45 bg-black/60 text-white hover:border-white hover:bg-white hover:text-black",
   };

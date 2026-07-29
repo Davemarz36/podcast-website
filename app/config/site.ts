@@ -29,15 +29,15 @@ export const siteConfig = {
   },
   theme: {
     colors: {
-      charcoal: "#171716",
-      ink: "#22211f",
-      ivory: "#f1ece2",
-      paper: "#faf7f0",
-      clay: "#a56549",
-      copper: "#bd8060",
+      charcoal: "#000000",
+      ink: "#f5f5f5",
+      ivory: "#ffffff",
+      paper: "#050505",
+      clay: "#ffffff",
+      copper: "#ffffff",
     },
     fonts: {
-      display: "Instrument Serif",
+      display: "Manrope",
       body: "Manrope",
     },
   },
