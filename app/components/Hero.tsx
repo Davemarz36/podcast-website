@@ -12,13 +12,13 @@ export function Hero() {
     <section
       id="top"
       aria-labelledby="hero-heading"
-      className="relative isolate min-h-[100svh] overflow-hidden bg-charcoal text-ivory"
+      className="relative isolate flex min-h-[100svh] overflow-hidden bg-black font-sans text-white"
     >
       <motion.div
-        className="absolute inset-x-0 top-0 -z-20 h-[42svh] overflow-hidden lg:inset-y-0 lg:left-auto lg:h-auto lg:w-[52%]"
-        initial={reduceMotion ? false : { scale: 1.035, opacity: 0.78 }}
+        className="absolute inset-0 -z-30 overflow-hidden"
+        initial={reduceMotion ? false : { scale: 1.04, opacity: 0.76 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <Image
           src={siteConfig.heroImage.src}
@@ -26,39 +26,53 @@ export function Hero() {
           fill
           priority
           unoptimized
-          sizes="(max-width: 1023px) 100vw, 52vw"
-          className="object-cover object-[50%_35%] grayscale-[28%] sepia-[8%] lg:object-[50%_42%]"
+          sizes="100vw"
+          className="object-cover object-[48%_38%] grayscale contrast-[1.12] lg:object-[50%_40%]"
         />
       </motion.div>
 
-      <div className="absolute inset-x-0 top-0 -z-10 h-[55svh] bg-gradient-to-b from-charcoal/35 via-transparent to-charcoal lg:inset-y-0 lg:left-auto lg:h-auto lg:w-[60%] lg:bg-gradient-to-r lg:from-charcoal lg:via-charcoal/35 lg:to-transparent" />
-      <div className="grain absolute inset-0 -z-10 opacity-25" />
+      <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(0,0,0,.94)_0%,rgba(0,0,0,.78)_38%,rgba(0,0,0,.28)_72%,rgba(0,0,0,.36)_100%)]" />
+      <div className="absolute inset-0 -z-20 bg-[linear-gradient(0deg,rgba(0,0,0,.86)_0%,transparent_50%,rgba(0,0,0,.25)_100%)] lg:bg-[linear-gradient(0deg,rgba(0,0,0,.7)_0%,transparent_48%,rgba(0,0,0,.28)_100%)]" />
 
       <motion.div
-        className="page-shell flex min-h-[100svh] items-end pb-10 pt-[41svh] sm:pb-16 sm:pt-[49svh] lg:items-center lg:pb-16 lg:pt-28"
-        initial={reduceMotion ? false : { opacity: 0, y: 22 }}
+        className="page-shell flex min-h-[100svh] items-end pb-10 pt-32 sm:pb-14 lg:items-center lg:pb-20 lg:pt-36"
+        initial={reduceMotion ? false : { opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.85, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="relative z-10 max-w-[54rem] lg:w-[62%]">
-          <p className="eyebrow text-copper">Stories that move people forward</p>
+        <div className="relative z-10 w-full max-w-[64rem]">
+          <div className="mb-6 flex items-center gap-3 text-[0.64rem] font-semibold uppercase tracking-[0.22em] text-white/64">
+            <span className="h-px w-10 bg-white" aria-hidden="true" />
+            Stories that move people forward
+          </div>
+
           <h1
             id="hero-heading"
-            className="mt-5 font-display text-[2.9rem] leading-[0.86] tracking-[-0.045em] sm:text-[clamp(3.8rem,8vw,5.5rem)] lg:text-[clamp(5.2rem,7.4vw,7.8rem)]"
+            className="max-w-[61rem] text-[clamp(3.25rem,10.8vw,5.1rem)] font-medium leading-[0.94] tracking-[-0.065em] sm:text-[clamp(4.4rem,8vw,7rem)] lg:text-[clamp(5.4rem,6.7vw,7.3rem)]"
           >
-            Ordinary lives. Honest conversations. Extraordinary courage.
+            Ordinary lives.<br />
+            Honest conversations.<br />
+            Extraordinary courage.
           </h1>
-          <p className="mt-6 max-w-xl text-[0.94rem] leading-7 text-white/66 sm:mt-7 sm:text-lg sm:leading-8">
+
+          <p className="mt-7 max-w-2xl text-[0.96rem] leading-7 text-white/68 sm:text-lg sm:leading-8">
             A story-led platform exploring faith, identity, migration, ambition, struggle and the unfinished process of becoming.
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-            <CTAButton href="#mission">Explore the Mission</CTAButton>
-            <CTAButton href="#join" variant="outline">Join the Journey</CTAButton>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <CTAButton href="#mission" variant="white" plain>Explore the Mission</CTAButton>
+            <CTAButton href="#join" variant="black" plain>Join the Journey</CTAButton>
           </div>
-          <p className="mt-5 border-l border-copper pl-4 text-xs italic tracking-wide text-white/48 sm:mt-7">
-            Because no honest story is insignificant.
-          </p>
         </div>
+      </motion.div>
+
+      <motion.div
+        initial={reduceMotion ? false : { opacity: 0, x: 16 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.65 }}
+        className="absolute bottom-5 right-4 hidden border border-white/28 bg-black/65 px-6 py-4 text-sm text-white/76 backdrop-blur-sm sm:block lg:bottom-8 lg:right-8 lg:px-8 lg:py-5"
+      >
+        Because no honest story is insignificant.
       </motion.div>
     </section>
   );

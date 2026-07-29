@@ -14,7 +14,9 @@ test("server-renders the storytelling landing page", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Ordinary lives\. Honest conversations\. Extraordinary courage\./);
+  assert.match(html, /Ordinary lives\./);
+  assert.match(html, /Honest conversations\./);
+  assert.match(html, /Extraordinary courage\./);
   assert.match(html, /The most powerful stories are not always the most visible/);
   assert.match(html, /Join the First Listeners/);
   assert.match(html, /Share a Story/);

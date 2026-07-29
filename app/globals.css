@@ -78,11 +78,10 @@ select {
 .nav-link {
   position: relative;
   padding-block: 0.45rem;
-  color: rgb(255 255 255 / 0.7);
-  font-size: 0.64rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.72);
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
   transition: color 200ms ease;
 }
 
@@ -93,7 +92,7 @@ select {
   left: 0;
   height: 1px;
   content: "";
-  background: var(--copper);
+  background: white;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 250ms ease;
