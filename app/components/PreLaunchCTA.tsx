@@ -10,7 +10,7 @@ export function PreLaunchCTA() {
       <div className="page-shell relative grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-end lg:gap-20">
         <Reveal>
           <p className="eyebrow text-white/64">The first conversations are coming</p>
-          <h2 id="join-heading" className="mt-5 max-w-5xl text-[clamp(3.5rem,7.6vw,8.2rem)] font-medium leading-[0.9] tracking-[-0.065em]">
+          <h2 id="join-heading" className="mt-5 max-w-5xl text-[60px] font-medium leading-[0.9] tracking-[-0.065em]">
             Every story begins when someone decides to speak.
           </h2>
           <p className="mt-7 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">

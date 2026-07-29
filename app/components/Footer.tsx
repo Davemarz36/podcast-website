@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid gap-10 border-b border-white/12 pb-10 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <a href="#top" className="text-2xl font-semibold tracking-[-0.04em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">{siteConfig.name}</a>
-            <p className="mt-3 max-w-lg text-xl font-medium leading-tight tracking-[-0.03em] text-white/62">{siteConfig.belief}</p>
+            <p className="mt-3 max-w-lg text-lg font-medium leading-tight tracking-[-0.03em] text-white/62">{siteConfig.belief}</p>
           </div>
           <nav aria-label="Footer links" className="flex max-w-xl flex-wrap gap-x-6 gap-y-3 text-xs uppercase tracking-[0.12em] text-white/52">
             <a href={`mailto:${siteConfig.contactEmail}`} className="transition hover:text-white">Contact</a>

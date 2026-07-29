@@ -13,7 +13,7 @@ export function ConversationPillars() {
         <div className="grid gap-8 lg:grid-cols-[1fr_.65fr] lg:items-end">
           <Reveal>
             <p className="eyebrow eyebrow-dark">Conversation pillars</p>
-            <h2 id="conversations-heading" className="mt-5 max-w-4xl text-[clamp(3.3rem,7vw,7.2rem)] font-medium leading-[0.92] tracking-[-0.06em]">
+            <h2 id="conversations-heading" className="mt-5 max-w-4xl text-[60px] font-medium leading-[0.92] tracking-[-0.06em] text-[#262626]">
               The conversations behind the person.
             </h2>
           </Reveal>
@@ -31,7 +31,7 @@ export function ConversationPillars() {
                 className="group grid gap-4 border-b border-black/16 py-8 sm:grid-cols-[4rem_1fr] lg:grid-cols-[5rem_.7fr_1fr] lg:items-center lg:gap-10 lg:py-10"
               >
                 <span className="text-[0.66rem] font-extrabold tracking-[0.16em] text-black/42">{pillar.number}</span>
-                <h3 className="text-[clamp(2.8rem,5vw,5.2rem)] font-medium leading-none tracking-[-0.055em]">{pillar.title}</h3>
+                <h3 className="text-[48px] font-medium leading-none tracking-[-0.055em]" style={{color: pillar.title === "Becoming" ? "#3d3d3d" : pillar.title === "Building" ? "#303030" : "#2f2f2f"}}>{pillar.title}</h3>
                 <p className="max-w-xl text-sm leading-7 text-black/56 sm:col-start-2 sm:text-base lg:col-start-auto lg:justify-self-end lg:leading-8">{pillar.description}</p>
               </motion.article>
             </Reveal>

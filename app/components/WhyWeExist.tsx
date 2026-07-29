@@ -10,7 +10,7 @@ export function WhyWeExist() {
         <div className="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:gap-24">
           <Reveal>
             <p className="eyebrow">Why we exist</p>
-            <h2 id="why-heading" className="mt-5 max-w-2xl text-[clamp(3.2rem,6.2vw,6.6rem)] font-medium leading-[0.92] tracking-[-0.058em]">
+            <h2 id="why-heading" className="mt-5 max-w-2xl text-[60px] font-medium leading-[0.92] tracking-[-0.058em]">
               The most powerful stories are not always the most visible.
             </h2>
           </Reveal>

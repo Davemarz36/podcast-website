@@ -47,14 +47,14 @@ export function Hero() {
 
           <h1
             id="hero-heading"
-            className="max-w-[61rem] text-[clamp(3.25rem,10.8vw,5.1rem)] font-medium leading-[0.94] tracking-[-0.065em] sm:text-[clamp(4.4rem,8vw,7rem)] lg:text-[clamp(5.4rem,6.7vw,7.3rem)]"
+            className="max-w-[61rem] text-[72px] font-medium leading-[0.94] tracking-[-0.065em]"
           >
             Ordinary lives.<br />
             Honest conversations.<br />
             Extraordinary courage.
           </h1>
 
-          <p className="mt-7 max-w-2xl text-[0.96rem] leading-7 text-white/68 sm:text-lg sm:leading-8">
+          <p className="mt-7 max-w-2xl text-[0.96rem] font-light leading-7 text-white/68 sm:text-lg sm:leading-8">
             A story-led platform exploring faith, identity, migration, ambition, struggle and the unfinished process of becoming.
           </p>
 
