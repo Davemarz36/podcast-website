@@ -8,7 +8,7 @@ export function ConversationPillars() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section id="conversations" aria-labelledby="conversations-heading" className="section-pad border-t border-black/10 bg-white font-sans text-black">
+    <section id="conversations" aria-labelledby="conversations-heading" className="section-pad border-t border-black/10 bg-white font-sans text-dark-heading">
       <div className="page-shell">
         <div className="grid gap-8 lg:grid-cols-[1fr_.65fr] lg:items-end">
           <Reveal>

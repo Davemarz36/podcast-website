@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function MissionVision() {
   return (
-    <section id="mission" aria-labelledby="mission-heading" className="section-pad overflow-hidden border-t border-black/10 bg-white font-sans text-black">
+    <section id="mission" aria-labelledby="mission-heading" className="section-pad overflow-hidden border-t border-black/10 bg-white font-sans text-dark-heading">
       <div className="page-shell">
         <Reveal>
           <p className="eyebrow eyebrow-dark">What we are building</p>
@@ -25,7 +25,7 @@ export function MissionVision() {
 
         <Reveal className="mt-14 grid gap-5 sm:grid-cols-[auto_1fr] sm:items-start lg:mt-20">
           <span className="mt-2 hidden h-px w-24 bg-black sm:block" aria-hidden="true" />
-          <blockquote className="max-w-5xl text-[clamp(2.6rem,5.6vw,6rem)] font-medium leading-[0.95] tracking-[-0.05em] text-black">
+          <blockquote className="max-w-5xl text-[clamp(2.6rem,5.6vw,6rem)] font-medium leading-[0.95] tracking-[-0.05em] text-dark-heading">
             “You do not have to arrive before your story matters.”
           </blockquote>
         </Reveal>

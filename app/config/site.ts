@@ -35,6 +35,7 @@ export const siteConfig = {
       paper: "#050505",
       clay: "#ffffff",
       copper: "#ffffff",
+      darkHeading: "#090503",
     },
     fonts: {
       display: "Manrope",
