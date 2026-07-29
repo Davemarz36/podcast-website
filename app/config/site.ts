@@ -14,8 +14,8 @@ export const siteConfig = {
   storySubmissionUrl:
     "mailto:hello@projectname.example?subject=I%20have%20a%20story%20to%20share",
   heroImage: {
-    src: "/images/hero-reflection.jpg",
-    alt: "A thoughtful young man sitting beside a window in natural light.",
+    src: "/images/podcast.png",
+    alt: "David having a one on one session with bunmi.",
   },
   navigation: [
     { label: "Mission", href: "#mission" },
