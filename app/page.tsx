@@ -1,4 +1,5 @@
 import { ConversationPillars } from "./components/ConversationPillars";
+import { FeaturedConversation } from "./components/FeaturedConversation";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { MissionVision } from "./components/MissionVision";
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <MissionVision />
         <WhyWeExist />
+        <FeaturedConversation />
         <ConversationPillars />
         <PreLaunchCTA />
       </main>

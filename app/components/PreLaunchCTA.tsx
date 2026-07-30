@@ -18,7 +18,7 @@ export function PreLaunchCTA() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <CTAButton href="#newsletter-form" variant="white" plain>Join the First Listeners</CTAButton>
-            <CTAButton href={siteConfig.storySubmissionUrl} variant="black" plain>Share a Story</CTAButton>
+            <ShareStoryButton />
           </div>
         </Reveal>
 

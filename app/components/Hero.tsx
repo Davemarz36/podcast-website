@@ -39,7 +39,7 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[48%_38%] grayscale contrast-[1.12] lg:object-[50%_40%]"
+          className="-scale-x-100 object-cover object-[48%_38%] grayscale contrast-[1.12] lg:object-[50%_40%]"
         />
       </motion.div>
 

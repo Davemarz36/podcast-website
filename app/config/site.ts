@@ -17,9 +17,20 @@ export const siteConfig = {
     src: "/images/podcast.png",
     alt: "David having a one on one session with bunmi.",
   },
+  featuredConversation: {
+    eyebrow: "Watch the conversation",
+    heading: "Stories need room to breathe.",
+    description:
+      "Our full conversations make space for context, contradiction, reflection and the quiet details that short clips cannot hold.",
+    youtubeId: "M7lc1UVf-VE",
+    title: "A sample full conversation",
+    poster: "/images/podcast.png",
+    posterAlt: "Two people seated across from each other during a recorded conversation.",
+  },
   navigation: [
     { label: "Mission", href: "#mission" },
     { label: "Why We Exist", href: "#why" },
+    { label: "Watch", href: "#watch" },
     { label: "Conversations", href: "#conversations" },
   ],
   socials: {
