@@ -13,6 +13,11 @@ export const siteConfig = {
   newsletterIntegration: "REPLACE_WITH_NEWSLETTER_PROVIDER",
   storySubmissionUrl:
     "mailto:hello@projectname.example?subject=I%20have%20a%20story%20to%20share",
+  partnership: {
+    deckPath: "/partnership-deck.pdf",
+    deckCover: "/images/partnership-deck-cover.png",
+    contactSubject: "Partnership conversation",
+  },
   heroImage: {
     src: "/images/podcast.png",
     alt: "David having a one on one session with bunmi.",
