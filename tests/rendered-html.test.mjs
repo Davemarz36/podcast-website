@@ -4,6 +4,7 @@ import test from "node:test";
 
 test("production build renders the storytelling landing page", async () => {
   const html = await readFile(new URL("../.next/server/app/index.html", import.meta.url), "utf8");
+  const socialCard = await readFile(new URL("../public/og-people-stories.png", import.meta.url));
   assert.match(html, /Ordinary lives\./);
   assert.match(html, /Honest conversations\./);
   assert.match(html, /Extraordinary courage\./);
@@ -13,6 +14,9 @@ test("production build renders the storytelling landing page", async () => {
   assert.match(html, /Join the First Listeners/);
   assert.match(html, /Share a Story/);
   assert.match(html, /href="\/partner"[^>]*>.*Partner With Us/s);
+  assert.match(html, /og-people-stories\.png/);
+  assert.equal(socialCard.subarray(1, 4).toString(), "PNG");
+  assert.ok(socialCard.byteLength > 100_000);
   assert.doesNotMatch(html, /The first stories are being prepared|We are listeners before we are hosts/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/);
 });

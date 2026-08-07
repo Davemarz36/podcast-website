@@ -8,6 +8,12 @@ export const siteConfig = {
     "To build a global storytelling platform where people feel seen, unfinished journeys are valued and ordinary experiences become a source of clarity and courage for others.",
   description:
     "A story-led platform exploring faith, identity, migration, ambition, struggle and the unfinished process of becoming.",
+  socialImage: {
+    src: "/og-people-stories.png",
+    width: 1200,
+    height: 630,
+    alt: "People&Stories — honest conversations for people still becoming.",
+  },
   siteUrl: "https://stories-still-becoming.officialdavemarz.chatgpt.site",
   contactEmail: "hello@projectname.example",
   newsletterIntegration: "REPLACE_WITH_NEWSLETTER_PROVIDER",

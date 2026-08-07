@@ -21,13 +21,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `Partner With Us — ${siteConfig.name}`,
     description: pageDescription,
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: siteConfig.belief }],
+    images: [
+      {
+        url: siteConfig.socialImage.src,
+        width: siteConfig.socialImage.width,
+        height: siteConfig.socialImage.height,
+        alt: siteConfig.socialImage.alt,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `Partner With Us — ${siteConfig.name}`,
     description: pageDescription,
-    images: ["/og.png"],
+    images: [siteConfig.socialImage.src],
   },
 };
 
