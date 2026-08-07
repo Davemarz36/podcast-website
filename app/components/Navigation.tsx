@@ -5,7 +5,17 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { siteConfig } from "../config/site";
 
-export function Navigation() {
+export function Navigation({
+  homeHref = "#top",
+  anchorPrefix = "",
+  ctaHref = "#join",
+  ctaLabel = "Join the Journey",
+}: {
+  homeHref?: string;
+  anchorPrefix?: string;
+  ctaHref?: string;
+  ctaLabel?: string;
+} = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -39,7 +49,7 @@ export function Navigation() {
         }`}
       >
         <a
-          href="#top"
+          href={homeHref}
           className="relative z-50 font-sans text-base font-semibold leading-none tracking-[-0.035em] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:text-lg"
           onClick={() => setOpen(false)}
         >
@@ -48,17 +58,17 @@ export function Navigation() {
 
         <nav aria-label="Primary navigation" className="hidden items-center gap-7 lg:flex">
           {siteConfig.navigation.map((item) => (
-            <a key={item.href} href={item.href} className="nav-link">
+            <a key={item.href} href={resolveNavigationHref(item.href, anchorPrefix)} className="nav-link">
               {item.label}
             </a>
           ))}
         </nav>
 
         <a
-          href="#join"
+          href={ctaHref}
           className="hidden min-h-11 items-center border border-white bg-white px-6 text-sm font-bold tracking-[-0.01em] text-black transition-colors hover:bg-black hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white lg:inline-flex"
         >
-          Join the Journey
+          {ctaLabel}
         </a>
 
         <button
@@ -89,7 +99,7 @@ export function Navigation() {
               {siteConfig.navigation.map((item, index) => (
                 <a
                   key={item.href}
-                  href={item.href}
+                  href={resolveNavigationHref(item.href, anchorPrefix)}
                   onClick={() => setOpen(false)}
                   className="flex items-center justify-between border-b border-white/15 py-5 text-[clamp(2rem,9vw,3rem)] font-medium leading-none tracking-[-0.045em] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 >
@@ -99,15 +109,19 @@ export function Navigation() {
               ))}
             </div>
             <a
-              href="#join"
+              href={ctaHref}
               onClick={() => setOpen(false)}
               className="mt-8 inline-flex min-h-12 items-center justify-center border border-white bg-white px-5 text-sm font-bold text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
-              Join the Journey
+              {ctaLabel}
             </a>
           </motion.nav>
         )}
       </AnimatePresence>
     </header>
   );
+}
+
+function resolveNavigationHref(href: string, anchorPrefix: string) {
+  return anchorPrefix && href.startsWith("#") ? `${anchorPrefix}${href}` : href;
 }

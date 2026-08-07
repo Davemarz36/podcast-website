@@ -59,13 +59,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} — Honest Conversations for People Still Becoming`,
     description: siteConfig.description,
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: siteConfig.belief }],
+    images: [
+      {
+        url: siteConfig.socialImage.src,
+        width: siteConfig.socialImage.width,
+        height: siteConfig.socialImage.height,
+        alt: siteConfig.socialImage.alt,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — Honest Conversations for People Still Becoming`,
     description: siteConfig.description,
-    images: ["/og.png"],
+    images: [siteConfig.socialImage.src],
   },
 };
 

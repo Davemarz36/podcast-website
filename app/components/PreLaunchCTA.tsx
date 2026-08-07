@@ -16,9 +16,10 @@ export function PreLaunchCTA() {
           <p className="mt-7 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
             We are preparing our first season of conversations with people navigating life, faith, work, identity and change. Join the first listeners or tell us about a story that deserves to be heard.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <CTAButton href="#newsletter-form" variant="white" plain>Join the First Listeners</CTAButton>
-            <CTAButton href={siteConfig.storySubmissionUrl} variant="black" plain>Share a Story</CTAButton>
+            <ShareStoryButton />
+            <CTAButton href="/partner" variant="black" plain>Partner With Us</CTAButton>
           </div>
         </Reveal>
 
